@@ -1,0 +1,6 @@
+pandas
+scikit-learn
+scikit-image
+tensorflow
+keras
+PyQt5
