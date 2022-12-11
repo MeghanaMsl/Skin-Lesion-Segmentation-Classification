@@ -28,9 +28,11 @@ STEP 4: Run the HAM10000_training.ipynb notebook to train and save the UNET and 
 
 STEP 5: Install the required libraries from the requirements.txt file using "pip -r requirements.txt"
 
-STEP 6: Run the file Project_GUI.py in the same folder to view the GUI. The Images required for testing in the GUI can be selected from data/test folder. The output images are saved to folder data/user_inputs
+STEP 6: Run the file Project_GUI.py in the same folder to view the GUI. The Images required for testing in the GUI can be selected from data/test folder. The output images are saved to folder data/gui_outputs
 
 ## Quick Testing of Project
 The project can also be run directly without model training by invoking the **Project_GUI.py** file post installing the required libraries from requirement.txt file.
 
 Run the .py file and select an image from the data/test folder to perform all the pre-processing, segmentation and classification tasks on the chosen skin lesion image.
+
+The output files are automatically saved to the data/gui_outputs folder.

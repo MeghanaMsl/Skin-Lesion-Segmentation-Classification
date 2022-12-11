@@ -22,11 +22,8 @@ global a
 
 folder_path = Path() / "data"
 
-path = folder_path / "user_inputs"
+path = folder_path / "gui_outputs"
 data_path = folder_path / "test"
-
-# path = r'C:\Users\mslme\Documents\MSL\UH\SEM3\FMI\Project\data\user_inputs'
-# data_path = r'C:\Users\mslme\Documents\MSL\UH\SEM3\FMI\Project\data\test'
 
 
 class Ui_MainWindow(object):
