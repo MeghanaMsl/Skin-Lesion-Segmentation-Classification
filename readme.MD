@@ -1,8 +1,11 @@
 # Skin Lesion Classification & Segmentation
-### Final Project Submission for COSC 6370 - MEDICAL IMAGING
-
 ---
 ## Overview
+In this project, a Convolutional Neural Network (CNN’s) for accurate skin lesion segmentation using U-net algorithm is created. 
+Further the ROI is processed to collect a series of features, scanning the skin area of interest for asymmetry (A), border irregularity (B), colors variegation (C), diameter (D) and texture (T) using efficient ABCDT feature extraction technique. 
+The extracted features are then fed into the Support Vector Machine (SVM) classifier for classification
+
+## File Description
 -	**HAM10000_training.ipynb:**
 This file consists of all the python code and functions required to create the UNET segmentation model, train, test it and perform feature extraction. It also contains the code for training a SVM classifier for skin lesion classification.
 -	**Project_GUI.py:**
@@ -36,3 +39,18 @@ The project can also be run directly without model training by invoking the **Pr
 Run the .py file and select an image from the data/test folder to perform all the pre-processing, segmentation and classification tasks on the chosen skin lesion image.
 
 The output files are automatically saved to the data/gui_outputs folder.
+
+## Result
+The segmentation masks obtained by our trained UNet model compared against the ground truth masks from the HAM10000 dataset are as follows:
+![result_segmentation.png](result_segmentation.png?raw=true "Results")
+
+The screenshot below shows the PyQT GUI with all the sequence of steps that have been carried out in this project. 
+![result.png](result.png?raw=true "Results")
+
+- The first image is the original skin lesion image
+- The second image represents the grayscale converted image.
+- The third image shows the result of performing the morphology operation on the grayscale image. 
+- The fourth image represents the inpainted image with the thresholds calculated from the morphology operation. At this step any noise due to hair is eliminated.
+- The fifth image represents the Gaussian blurred image which is sent as an input to our UNET model. 
+- The final image represents the segmentation map predicted by our UNET model.
+- Lastly, clicking the “View Classification” button would show the results of the original image category.
